@@ -155,6 +155,18 @@ const weexConfig = {
     path: path.join(__dirname, '../dist'),
     filename: '[name].js'
   },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      '@': helper.resolve('src'),
+      '@utils': helper.resolve('src/utils'),
+      '@router': helper.resolve('src/router'),
+      '@store': helper.resolve('src/store'),
+      '@components': helper.resolve('src/components'),
+      '@assets': helper.resolve('src/assets'),
+      '@pages': helper.resolve('src/pages'),
+    }
+  },
   /*
    * Options affecting the resolving of modules.
    *
