@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run serve",
-    "build": "webpack --env.NODE_ENV=common",
-    "build:prod": "webpack --env.NODE_ENV=production",
+    "build": "webpack --env.NODE_ENV=common --progress --color --hide-modules",
+    "build:prod": "webpack --env.NODE_ENV=production --progress --color --hide-modules",
     "build:plugin": "webpack --env.NODE_ENV=plugin",
     "clean": "rimraf ./web/build",
     "dev": "webpack --env.NODE_ENV=common --progress --watch",

@@ -84,7 +84,8 @@ const webConfig = {
   entry: webEntry,
   output: {
     path: helper.rootNode('./dist'),
-    filename: '[name].web.js'
+    filename: '[name].web.js',
+    chunkFilename: '[id].[chunkhash].js'
   },
   /**
    * Options affecting the resolving of modules.
