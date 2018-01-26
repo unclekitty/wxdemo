@@ -2,6 +2,12 @@ import Vue from 'vue';
 
 import weex from 'weex-vue-render';
 
+import router from '@router';
+
+import App from '@/app.vue';
+
+import mixins from './mixins';
+
 // import render-core.
 // import weex from 'weex-vue-render/dist/index.core';
 
@@ -16,11 +22,11 @@ import weex from 'weex-vue-render';
 
 weex.init(Vue);
 
+
+// register global mixins.
+Vue.mixin(mixins);
+
 // app
-
-import App from '@/index.vue';
-import router from '@router';
-
 new Vue(Vue.util.extend({
   el: '#root',
   router
